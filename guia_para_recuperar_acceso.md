@@ -1,41 +1,41 @@
-Gua para Recuperar Contrasea del SGA o Correo Institucional  UNAC
+Guia para Recuperar Contraseña del SGA o Correo Institucional  UNAC
 ________________________________________
  Para Estudiantes de Pregrado
- Recuperar contrasea del Sistema de Gestin Acadmica (SGA)
-1.	Enva un correo a: atencion.estudiante.pregrado@unac.pe
-2.	Asunto: OLVIDO DE CONTRASEA - SGA
+ Recuperar contraseña del Sistema de Gestion Academica (SGA)
+1.	Envia un correo a: atencion.estudiante.pregrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEÑA - SGA
 3.	Cuerpo del mensaje:
-Solicito el restablecimiento de mi contrasea del Sistema de Gestin Acadmica (SGA) por olvido, para poder realizar el pago del trmite _____________________.
-CDIGO DE ESTUDIANTE: _____________  
+Solicito el restablecimiento de mi contraseña del Sistema de Gestion Academica (SGA) por olvido, para poder realizar el pago del tramite _____________________.
+CODIGO DE ESTUDIANTE: _____________  
 ESCUELA PROFESIONAL: _____________
 Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
 ________________________________________
- Recuperar contrasea del Correo Institucional
+ Recuperar contraseña del Correo Institucional
 1.	Enva un correo a: atencion.estudiante.pregrado@unac.pe
-2.	Asunto: OLVIDO DE CONTRASEA - CORREO INSTITUCIONAL
+2.	Asunto: OLVIDO DE CONTRASEÑA - CORREO INSTITUCIONAL
 3.	Cuerpo del mensaje:
-Solicito el restablecimiento de la contrasea de mi correo institucional UNAC, ya que no puedo acceder al mismo.
+Solicito el restablecimiento de la contraseña de mi correo institucional UNAC, ya que no puedo acceder al mismo.
 CDIGO DE ESTUDIANTE: _____________  
 ESCUELA PROFESIONAL: _____________  
 CORREO INSTITUCIONAL: ________________@unac.pe
 Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
 ________________________________________
  Para Estudiantes de Posgrado
- Recuperar contrasea del Sistema de Gestin Acadmica (SGA)
-1.	Enva un correo a: atencion.estudiante.posgrado@unac.pe
-2.	Asunto: OLVIDO DE CONTRASEA - SGA
+ Recuperar contraseña del Sistema de Gestion Academica (SGA)
+1.	Envia un correo a: atencion.estudiante.posgrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEÑA - SGA
 3.	Cuerpo del mensaje:
-Solicito el restablecimiento de mi contrasea del Sistema de Gestin Acadmica (SGA) por olvido, para poder realizar el pago del trmite _____________________.
-CDIGO DE ESTUDIANTE: _____________  
+Solicito el restablecimiento de mi contraseña del Sistema de Gestion Academica (SGA) por olvido, para poder realizar el pago del tramite _____________________.
+CODIGO DE ESTUDIANTE: _____________  
 PROGRAMA DE POSGRADO: _____________
 Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
 ________________________________________
- Recuperar contrasea del Correo Institucional
-1.	Enva un correo a: atencion.estudiante.posgrado@unac.pe
-2.	Asunto: OLVIDO DE CONTRASEA - CORREO INSTITUCIONAL
+ Recuperar contraseña del Correo Institucional
+1.	Envia un correo a: atencion.estudiante.posgrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEÑA - CORREO INSTITUCIONAL
 3.	Cuerpo del mensaje:
-Solicito el restablecimiento de la contrasea de mi correo institucional UNAC, ya que no puedo acceder al mismo.
-CDIGO DE ESTUDIANTE: _____________  
+Solicito el restablecimiento de la contraseña de mi correo institucional UNAC, ya que no puedo acceder al mismo.
+CODIGO DE ESTUDIANTE: _____________  
 PROGRAMA DE POSGRADO: _____________  
 CORREO INSTITUCIONAL: ________________@unac.pe
 Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
