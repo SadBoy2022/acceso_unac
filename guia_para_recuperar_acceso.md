@@ -1,2 +1,46 @@
-para recuperar contrasena del sga enviar un correo a atencion.estudiante@unac.pe
-para recuperar contrasena de correo enviar mensaje a atencion.estudiante.posgrado@unac.pe
+Gua para Recuperar Contrasea del SGA o Correo Institucional  UNAC
+________________________________________
+ Para Estudiantes de Pregrado
+ Recuperar contrasea del Sistema de Gestin Acadmica (SGA)
+1.	Enva un correo a: atencion.estudiante.pregrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEA - SGA
+3.	Cuerpo del mensaje:
+Solicito el restablecimiento de mi contrasea del Sistema de Gestin Acadmica (SGA) por olvido, para poder realizar el pago del trmite _____________________.
+CDIGO DE ESTUDIANTE: _____________  
+ESCUELA PROFESIONAL: _____________
+Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
+________________________________________
+ Recuperar contrasea del Correo Institucional
+1.	Enva un correo a: atencion.estudiante.pregrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEA - CORREO INSTITUCIONAL
+3.	Cuerpo del mensaje:
+Solicito el restablecimiento de la contrasea de mi correo institucional UNAC, ya que no puedo acceder al mismo.
+CDIGO DE ESTUDIANTE: _____________  
+ESCUELA PROFESIONAL: _____________  
+CORREO INSTITUCIONAL: ________________@unac.pe
+Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
+________________________________________
+ Para Estudiantes de Posgrado
+ Recuperar contrasea del Sistema de Gestin Acadmica (SGA)
+1.	Enva un correo a: atencion.estudiante.posgrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEA - SGA
+3.	Cuerpo del mensaje:
+Solicito el restablecimiento de mi contrasea del Sistema de Gestin Acadmica (SGA) por olvido, para poder realizar el pago del trmite _____________________.
+CDIGO DE ESTUDIANTE: _____________  
+PROGRAMA DE POSGRADO: _____________
+Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
+________________________________________
+ Recuperar contrasea del Correo Institucional
+1.	Enva un correo a: atencion.estudiante.posgrado@unac.pe
+2.	Asunto: OLVIDO DE CONTRASEA - CORREO INSTITUCIONAL
+3.	Cuerpo del mensaje:
+Solicito el restablecimiento de la contrasea de mi correo institucional UNAC, ya que no puedo acceder al mismo.
+CDIGO DE ESTUDIANTE: _____________  
+PROGRAMA DE POSGRADO: _____________  
+CORREO INSTITUCIONAL: ________________@unac.pe
+Adjunto una foto de mi DNI donde se visualicen claramente mis nombres y apellidos.
+________________________________________
+ Recomendaciones Importantes
+	Asegrate de que el DNI est legible y completo (foto clara).
+	Enva el mensaje desde un correo electrnico que revises frecuentemente.
+	Para mayor orientacin, contacta a la Secretara Acadmica de tu escuela o programa.
