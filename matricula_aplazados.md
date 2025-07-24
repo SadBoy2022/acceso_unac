@@ -1,16 +1,23 @@
 ---
 keywords:
-  - matrícula:95
-  - aplazados:90
-  - exámenes:85
-  - pago:80
-  - fechas:75
-  - asignaturas:70
-  - regular:60
-  - costo:65
-  - tupa:50
-  - scotiabank:40
-  - módulo:35
+  - matrícula:100
+  - aplazados:95
+  - exámenes:90
+  - pago:85
+  - fechas:90
+  - asignaturas:80
+  - regular:75
+  - costo:70
+  - tupa:65
+  - scotiabank:60
+  - módulo:55
+  - desaprobados:80
+  - reprobados:75
+  - calendario:70
+  - proceso:75
+  - requisitos:80
+  - trámite:70
+  - académico:65
 ---
 # Información de Matrícula para Aplazados - UNAC 2025
 
