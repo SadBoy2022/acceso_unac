@@ -1,11 +1,12 @@
 ---
 keywords:
-  - ayuda:10
-  - soporte:10
-  - contacto:15
-  - horarios:5
+  - ayuda:5
+  - soporte:5
+  - contacto:10
+  - horarios:3
   - atención:8
-  - general:5
+  - general:1
+  - información:1
 ---
 # Asistencia Adicional
 
