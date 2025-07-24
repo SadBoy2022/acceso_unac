@@ -1,3 +1,12 @@
+---
+keywords:
+  - ayuda:10
+  - soporte:10
+  - contacto:15
+  - horarios:5
+  - atención:8
+  - general:5
+---
 # Asistencia Adicional
 
 Si no encuentras respuesta a tu consulta en este asistente virtual, te recomendamos:
