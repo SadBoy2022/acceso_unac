@@ -1,3 +1,18 @@
+---
+keywords:
+  - contraseña:90
+  - correo:85
+  - recuperar:80
+  - acceso:75
+  - credenciales:70
+  - posgrado:60
+  - pregrado:60
+  - sga:65
+  - olvido:75
+  - restablecer:70
+  - dni:50
+  - institucional:55
+---
 # Guía para Recuperar Accesos UNAC
 
 ## Estudiantes de Pregrado
