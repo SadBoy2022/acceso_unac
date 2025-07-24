@@ -11,5 +11,3 @@ Si no encuentras respuesta a tu consulta en este asistente virtual, te recomenda
 ## Horarios de atención:
 - Lunes a Viernes: 8:00 am - 5:00 pm
 - Sábados: 9:00 am - 1:00 pm
-
-*Este mensaje aparece cuando el sistema no encuentra información específica para tu consulta.*
