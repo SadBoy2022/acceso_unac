@@ -23,7 +23,6 @@ Pasos:
    
    CÓDIGO DE ESTUDIANTE: [tu código]  
    ESCUELA PROFESIONAL: [nombre de tu escuela]  
-   CORREO INSTITUCIONAL: [tu_correo]@unac.pe
    
    Adjunto foto legible de mi DNI (ambos lados).
 
@@ -50,7 +49,6 @@ Pasos:
    
    CÓDIGO DE ESTUDIANTE: [tu código]  
    PROGRAMA DE POSGRADO: [nombre del programa]  
-   CORREO INSTITUCIONAL: [tu_correo]@unac.pe
    
    Adjunto foto legible de mi DNI (ambos lados).
 
