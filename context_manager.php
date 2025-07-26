@@ -260,15 +260,26 @@ class ContextManager {
     public function getStats() {
         $totalDocs = count($this->documents);
         $totalKeywords = 0;
+        $totalWords = 0;
+        $documentsList = [];
         
-        foreach ($this->documents as $doc) {
+        foreach ($this->documents as $name => $doc) {
             $totalKeywords += count($doc['keywords']);
+            $wordCount = str_word_count($doc['content']);
+            $totalWords += $wordCount;
+            
+            $documentsList[] = [
+                'name' => $name,
+                'words' => $wordCount,
+                'keywords' => count($doc['keywords'])
+            ];
         }
         
         return [
             'total_documents' => $totalDocs,
             'total_keywords' => $totalKeywords,
-            'documents' => array_keys($this->documents)
+            'total_words' => $totalWords,
+            'documents' => $documentsList
         ];
     }
 }
