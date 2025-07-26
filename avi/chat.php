@@ -450,37 +450,69 @@ document.addEventListener('DOMContentLoaded', function() {
                     const yaml = yamlMatch[1];
                     const palabrasClave = {};
                     
-                    // Parsear palabras clave
+                    // Parsear palabras clave - MEJORADO
                     yaml.split('\n').forEach(linea => {
                         if (linea.includes('keywords:')) return;
-                        const coincidencia = linea.match(/-\s*([\wáéíóúñ]+):(\d+)/);
-                        if (coincidencia) palabrasClave[coincidencia[1]] = parseInt(coincidencia[2]);
+                        const coincidencia = linea.match(/^\s*-\s*([\wáéíóúñ]+):(\d+)/);
+                        if (coincidencia) {
+                            palabrasClave[coincidencia[1].toLowerCase()] = parseInt(coincidencia[2]);
+                        }
                     });
 
-                    // Calcular puntaje
+                    // Calcular puntaje - MEJORADO
                     let puntaje = 0;
+                    
+                    // Buscar coincidencias exactas y parciales
                     Object.entries(palabrasClave).forEach(([palabra, peso]) => {
-                        if (consultaLower.includes(palabra)) {
+                        // Coincidencia exacta
+                        if (new RegExp(`\\b${palabra}\\b`).test(consultaLower)) {
+                            puntaje += peso * 1.5; // Bonus por coincidencia exacta
+                        }
+                        // Coincidencia parcial
+                        else if (consultaLower.includes(palabra)) {
                             puntaje += peso;
-                            // Bonus por coincidencia exacta
-                            if (new RegExp(`\\b${palabra}\\b`).test(consultaLower)) {
-                                puntaje += peso * 0.2;
+                        }
+                        
+                        // Coincidencias con variaciones de la palabra
+                        if (palabra === 'matrícula' || palabra === 'matricula') {
+                            if (/matri[ck]ula/i.test(consultaLower)) {
+                                puntaje += peso * 1.3;
                             }
+                        }
+                        
+                        if (palabra === 'aplazados' && /aplaza[rd]/i.test(consultaLower)) {
+                            puntaje += peso * 1.2;
                         }
                     });
 
                     // Bonus por combinación de palabras clave
-                    if (Object.keys(palabrasClave).filter(p => consultaLower.includes(p)).length > 1) {
-                        puntaje *= 1.3;
+                    const palabrasEncontradas = Object.keys(palabrasClave).filter(p => 
+                        consultaLower.includes(p) || new RegExp(`\\b${p}\\b`).test(consultaLower)
+                    );
+                    
+                    if (palabrasEncontradas.length > 1) {
+                        puntaje *= 1.4; // Bonus por múltiples coincidencias
                     }
 
                     // Puntaje adicional por coincidencia con nombre de archivo
                     const nombreArchivoSinExt = archivo.replace('.md', '').toLowerCase();
-                    if (consultaLower.includes(nombreArchivoSinExt)) {
-                        puntaje += 50;
+                    const partesNombre = nombreArchivoSinExt.split('_');
+                    
+                    partesNombre.forEach(parte => {
+                        if (consultaLower.includes(parte)) {
+                            puntaje += 30; // Bonus por nombre de archivo
+                        }
+                    });
+                    
+                    // Casos especiales para matricula
+                    if (/matri[ck]ula/i.test(consultaLower) && nombreArchivoSinExt.includes('matricula')) {
+                        puntaje += 50; // Bonus especial para matrícula
                     }
 
-                    if (puntaje > 0) puntajesArchivos[archivo] = puntaje;
+                    if (puntaje > 0) {
+                        puntajesArchivos[archivo] = puntaje;
+                        console.log(`Archivo: ${archivo}, Puntaje: ${puntaje}, Palabras: ${palabrasEncontradas.join(', ')}`);
+                    }
                 }
             } catch (e) {
                 console.error(`Error procesando ${archivo}:`, e);
@@ -492,8 +524,16 @@ document.addEventListener('DOMContentLoaded', function() {
             .sort((a, b) => b[1] - a[1])
             .map(([archivo]) => archivo);
 
+        console.log("Puntajes calculados:", puntajesArchivos);
         console.log("Archivos relevantes ordenados:", archivosOrdenados);
-        return archivosOrdenados.length > 0 ? archivosOrdenados : ['default.md'];
+        
+        // Si no hay coincidencias, devolver el archivo más general
+        if (archivosOrdenados.length === 0) {
+            console.log("No se encontraron coincidencias, usando default.md");
+            return ['default.md'];
+        }
+        
+        return archivosOrdenados;
     }
 
     // Función para obtener contexto combinado
@@ -506,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Archivos seleccionados:", archivosRelevantes);
             
             // Forzar actualización evitando caché del navegador
-            const promesasContexto = archivosRelevantes.map(archivo => 
+            const promesasContexto = archivosRelevantes.slice(0, 3).map(archivo => // Limitar a 3 archivos máximo
                 fetch(`https://raw.githubusercontent.com/SadBoy2022/asistente-unac/main/${archivo}?t=${Date.now()}`)
                     .then(res => {
                         if (!res.ok) throw new Error(`Error ${res.status} al cargar ${archivo}`);
@@ -514,7 +554,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                     .then(contenido => {
                         // Eliminar el bloque YAML del contenido
-                        return contenido.replace(/^---\n[\s\S]*?\n---/, '').trim();
+                        const contenidoLimpio = contenido.replace(/^---\n[\s\S]*?\n---/, '').trim();
+                        
+                        if (contenidoLimpio.length > 0) {
+                            console.log(`Contexto cargado de ${archivo}: ${contenidoLimpio.substring(0, 100)}...`);
+                            return `=== INFORMACIÓN DE ${archivo.replace('.md', '').toUpperCase()} ===\n\n${contenidoLimpio}`;
+                        }
+                        return '';
                     })
                     .catch(error => {
                         console.error(`Error cargando ${archivo}:`, error);
@@ -525,8 +571,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const contextos = await Promise.all(promesasContexto);
             const contextoCombinado = contextos.filter(ctx => ctx.trim().length > 0).join('\n\n---\n\n');
             
-            console.log("Contexto combinado:", contextoCombinado.substring(0, 200) + "...");
-            return contextoCombinado || obtenerMensajePorDefecto();
+            if (contextoCombinado.trim().length > 0) {
+                console.log("Contexto combinado exitoso:", contextoCombinado.substring(0, 300) + "...");
+                return contextoCombinado;
+            } else {
+                console.log("No se pudo obtener contexto, usando mensaje por defecto");
+                return obtenerMensajePorDefecto();
+            }
         } catch (error) {
             console.error("Error al obtener contexto combinado:", error);
             return obtenerMensajePorDefecto();
@@ -534,10 +585,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function obtenerMensajePorDefecto() {
-        return `No encontré información específica en mis documentos. Por favor:\n\n` +
-               `• Verifica que tu pregunta esté relacionada con los servicios académicos\n` +
-               `• Revisa el portal UNAC: www.unac.edu.pe\n` +
-               `• Contacta a tu Escuela Profesional`;
+        return `**Información no encontrada en mis documentos**\n\n` +
+               `Para obtener información específica sobre matrícula y otros temas académicos:\n\n` +
+               `• **Contacta directo**: (01) 123-4567 (Atención al Estudiante)\n` +
+               `• **Email**: atencion.estudiante@unac.edu.pe\n` +
+               `• **Portal UNAC**: www.unac.edu.pe\n` +
+               `• **Oficina de Registro Académico**: registro@unac.edu.pe`;
     }
 
     // Función para actualizar el contador de preguntas
