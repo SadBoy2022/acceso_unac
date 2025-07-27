@@ -1,5 +1,7 @@
 ---
 keywords:
+  - matrícula aplazada:100
+  - matricula aplazada:100
   - matrícula:100
   - aplazados:95
   - exámenes:90
