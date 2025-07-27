@@ -1,8 +1,8 @@
 ---
 keywords:
-  - matrícula aplazada: 100
-  - fechas matrícula: 90
-  - calendario aplazados: 85
+  - matrícula aplazada: 150
+  - fechas matrícula: 120
+  - calendario aplazados: 100
   - matrícula:100
   - aplazados:95
   - exámenes:90
